@@ -1,22 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import Ellipse from "./Ellipse";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0A192F] text-white py-16 px-4 relative">
-      <Ellipse
-        className="top-[4rem] left-[25%] blur-[5rem] z-0"
-        opacity={0.3}
-      />
-      <Ellipse
-        className="top-[4rem] left-[55%] blur-[5rem] z-0"
-        opacity={0.4}
-      />
-      <div className="max-w-7xl mx-auto z-50">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 z-50">
+    <footer className="bg-[#0A192F] text-white pt-16 pb-4 px-10 relative">
+      <div className="max-w-6xl mx-auto z-50 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
           {/* Location Info */}
-          <div>
+          <div className="col-span-2">
             <h3 className="font-bold mb-4">Pune</h3>
             <p className="text-sm text-white/60 mb-4">
               AB Chowk Block Shivnear Villa
@@ -93,20 +84,20 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h3 className="font-bold mb-4">Write to us</h3>
-            <div className="flex">
+        </div>
+          <div className="bg-blue-100 bg-opacity-10 flex py-2 mt-5 justify-around items-center rounded-md ">
+            <h3 className="font-bold text-white text-2xl ">Write to us</h3>
+            <div className="flex bg-white p-2 w-[75%] rounded-md">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-white/10 px-4 py-2 rounded-l-lg flex-1"
+                className="text-black px-4 py-2 rounded-l-lg flex-1 outline-none"
               />
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-r-lg">
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
                 Submit
               </button>
             </div>
           </div>
-        </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center flex items-center justify-between">
           <div className="flex items-center justify-start w-fit">
