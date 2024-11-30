@@ -10,10 +10,41 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        foreground: "var(--foreground)", 
+      },
+      fontFamily: {
+        cinzel: ["var(--font-cinzel)"],
       },
     },
   },
   plugins: [],
 };
-export default config;
+
+// Add custom styles
+const customStyles = {
+  '.no-scrollbar::-webkit-scrollbar': {
+    display: 'none',
+  },
+  '.no-scrollbar': {
+    '-ms-overflow-style': 'none',
+    'scrollbar-width': 'none',
+  },
+};
+
+const finalConfig = {
+  ...config,
+  theme: {
+    ...(config?.theme ?? {}),
+    extend: {
+      ...(config?.theme?.extend ?? {}),
+    },
+  },
+  plugins: [
+    function({ addUtilities }: { addUtilities: (styles: object) => void }) {
+      addUtilities(customStyles);
+    },
+    ...(config?.plugins ?? []),
+  ],
+};
+
+export default finalConfig;
