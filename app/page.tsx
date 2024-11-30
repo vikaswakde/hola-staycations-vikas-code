@@ -30,7 +30,7 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  if (showMeme && isMobile) {
+  if (showMeme) {
     return (
       <div className="h-screen bg-[#331906] flex items-center justify-center">
         <Image

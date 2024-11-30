@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)", 
+        foreground: "var(--foreground)",
       },
-      fontFamily: {
+      fontFamily: {  // Corrected 'font-Family' to 'fontFamily'
         cinzel: ["var(--font-cinzel)"],
       },
     },
