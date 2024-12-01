@@ -95,18 +95,18 @@ const Testimonials = () => {
         <div className="relative w-fit mx-auto">
           <button
             onClick={() => handleScroll("left")}
-            className="absolute -left-[4rem] text-white p-2 bh-white rounded-full shadow-md z-10 hover:scale-110 transition-transform top-[40%] w-[19px] h-[35px]"
+            className="absolute -left-[4rem] text-[#5C4033] pl-1 rounded-full bg-white shadow-md z-10 hover:scale-110 transition-transform top-[40%] w-[2rem] h-[35px]"
           >
             <ChevronLeft className="" />
           </button>
           <div
-            className="overflow-x-auto no-scrollbar select-none flex gap-6 pb-4 touch-pan-x max-w-[63rem] mx-auto"
+            className="overflow-x-hidden no-scrollbar select-none flex gap-6 touch-pan-x  max-w-[55rem] mx-auto"
             ref={carouselRef}
           >
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-[#5C4033] rounded-lg p-6 relative min-h-[26.6rem] min-w-[30.56rem] border"
+                className="bg-[#5C4033] rounded-lg p-6 relative h-[25rem] w-[25rem] border"
               >
                 <div className="flex  flex-col items-center gap-4 h-full justify-center ">
                   <div className="flex items-center gap-4 ">
@@ -145,9 +145,9 @@ const Testimonials = () => {
           </div>
           <button
             onClick={() => handleScroll("right")}
-            className="absolute -right-[4rem] p-2 top-[40%] bh-white  text-white rounded-full shadow-md z-10 hover:scale-110 transition-transform"
+            className="absolute -right-[4rem] pl-1 top-[40%] bg-white  text-[#5C4033] rounded-full shadow-md z-10 hover:scale-110 transition-transform w-[2rem] h-[35px]"
           >
-            <ChevronRight className="w-[19px] h-[35px]" />
+            <ChevronRight className="" />
           </button>
         </div>
       </div>
